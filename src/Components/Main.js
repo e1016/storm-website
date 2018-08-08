@@ -2,12 +2,20 @@ import React, { Component } from 'react'
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import Save from '../Sections/Save'
-import Find from '../Sections/Find'
-import Update from '../Sections/Update'
-import Home from '../Sections/Home'
+
+import { Intro, Storage } from '../Sections/Storm'
+
+import Save from '../Sections/Crud/Save'
+import Find from '../Sections/Crud/Find'
+import Update from '../Sections/Crud/Update'
 
 class Main extends Component {
+  cc (argm) {
+    return (window.location.pathname === argm)
+     ? 'active-class'
+     : 'off'
+  }
+
   render () {
     return (
       <Router>
@@ -17,46 +25,48 @@ class Main extends Component {
               <img className="img--aside-img" src="https://i.imgur.com/H2ohkEI.png" width="100"/>
               <h4>Storm</h4>
               <ul>
-                <li><Link to="/">Introduction</Link></li>
-                <li><Link to="/storage">localStorage</Link></li>
+                <li className={this.cc('/')}><Link to="/">Introduction</Link></li>
+                <li className={this.cc('/storage')}><Link to="/storage">localStorage</Link></li>
               </ul>
               <h4>Crud</h4>
               <ul>
-                <li><Link to="/save">Created – Save</Link></li>
-                <li><Link to="/find">Read – Find</Link></li>
-                <li><Link to="/update">Update</Link></li>
-                <li><Link to="/erase">Delete – Erase</Link></li>
+                <li className={this.cc('/save')}><Link to="/save">Created – Save</Link></li>
+                <li className={this.cc('/find')}><Link to="/find">Read – Find</Link></li>
+                <li className={this.cc('/update')}><Link to="/update">Update</Link></li>
+                <li className={this.cc('/erase')}><Link to="/erase">Delete – Erase</Link></li>
               </ul>
               <h4>Methods</h4>
               <ul>
-                <li><Link to="/events">Events</Link></li>
-                <li><Link to="/prototype">Prototype</Link></li>
+                <li className={this.cc('/events')}><Link to="/events">Events</Link></li>
+                <li className={this.cc('/prototype')}><Link to="/prototype">Prototype</Link></li>
               </ul>
               <h4>Integrations</h4>
               <ul>
-                <li><Link to="/vue">Storm – Vue</Link></li>
-                <li><Link to="/react">Storm – React</Link></li>
+                <li className={this.cc('/vue')}><Link to="/vue">Storm – Vue</Link></li>
+                <li className={this.cc('/react')}><Link to="/react">Storm – React</Link></li>
               </ul>
               <img className="img--aside-img" src="https://i.imgur.com/Ydft8tu.png" width="100"/>
 
               <h4>React Native</h4>
               <ul>
-                <li><Link to="/rn">Introduction</Link></li>
-                <li><Link to="/rn-storage">localStorage</Link></li>
+                <li className={this.cc('/rn')}><Link to="/rn">Introduction</Link></li>
+                <li className={this.cc('/rn-storage')}><Link to="/rn-storage">localStorage</Link></li>
               </ul>
               <h4>Crud</h4>
               <ul>
-                <li><Link to="/rn-save">Created – Save</Link></li>
-                <li><Link to="/rn-find">Read – Find</Link></li>
-                <li><Link to="/rn-update">Update</Link></li>
-                <li><Link to="/rn-erase">Delete – Erase</Link></li>
+                <li className={this.cc('/rn-save')}><Link to="/rn-save">Created – Save</Link></li>
+                <li className={this.cc('/rn-find')}><Link to="/rn-find">Read – Find</Link></li>
+                <li className={this.cc('/rn-update')}><Link to="/rn-update">Update</Link></li>
+                <li className={this.cc('/rn-erase')}><Link to="/rn-erase">Delete – Erase</Link></li>
               </ul>
-
             </ul>
           </aside>
           <main>
-            <Route exact path="/" component={Home} />
-            <Route path="/methods" component={Update} />
+            <Route exact path="/" component={Intro} />
+            <Route path="/storage" component={Storage} />
+            <Route path="/save" component={Save} />
+            <Route path="/find" component={Find} />
+            <Route path="/update" component={Update} />
           </main>
         </div>
       </Router>

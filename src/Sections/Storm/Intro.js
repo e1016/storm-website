@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Button from '../Components/Button'
+import Button from '../../Components/Button'
 
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight as theme } from 'react-syntax-highlighter/styles/prism';
 
 const codeString = `
 <!-- Linking library -->
-<script src="https://cdnjs.com/storm.js"></script>
+<script src="https://unpkg.com/storm-orm@1.3.0/dist/storm.js"></script>
 
 <script>
   // Create a collection
@@ -43,9 +43,8 @@ const Home = () => (
       </code>
     </p>
     <br />
-    <Button text="fork on GitHub"/>
-    <Button text="download"/>
-    <Button text="Link from cdnjs"/>
+    <Button href="https://github.com/e1016/storm">fork on GitHub</Button>
+    <Button href="https://unpkg.com/storm-orm@1.3.0/dist/storm.js">download</Button>
     <br />
     <br />
     <div className="separator to-left"></div>
