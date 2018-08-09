@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Update = () => (
-  <div>Otra cosa</div>
+export default () => (
+  <section className="main--info-section">
+    <p>Update</p>
+  </section>
 )
-
-export default Update

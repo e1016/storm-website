@@ -2,6 +2,6 @@ import React from 'react'
 
 export default () => (
   <section className="main--info-section">
-    <p>Erase</p>
+    <p>Vue</p>
   </section>
 )

@@ -133,3 +133,8 @@ a, button, input {
     opacity: 1;
   }
 }
+
+.link-on a {
+  color: #0099E5;
+  font-weight: 600;
+}
