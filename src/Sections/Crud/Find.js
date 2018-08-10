@@ -1,7 +1,6 @@
 import React from 'react'
 
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import Code from '../../Components/Src/Code'
 
 const code = `
 const Users = new Collection('referenceOnStore', {
@@ -16,7 +15,9 @@ const Find = () => (
       <br />
       To enable storage support in the session, a second argument must be passed to the collection constructo\r.
     </p>
-    <SyntaxHighlighter language='javascript' style={ base16AteliersulphurpoolLight }>{code}</SyntaxHighlighter>
+    <Code>
+      { code }
+    </Code>
   </section>
 )
 

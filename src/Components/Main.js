@@ -35,7 +35,7 @@ class Main extends Component {
       el.addEventListener('click', e => {
         document.querySelector('.link-on')
           .classList.remove('link-on')
-        
+
         e.currentTarget.classList.add('link-on')
       })
     )
@@ -47,7 +47,7 @@ class Main extends Component {
         <div className="main--divider">
           <aside className="aside aside--container">
             <ul>
-              <img className="img--aside-img" src="https://i.imgur.com/H2ohkEI.png" width="100"/>
+              <img className="img--aside-img" src="https://i.imgur.com/H2ohkEI.png" width="100" alt="Storm logo"/>
               <h4>Storm</h4>
               <ul>
                 <li className={ this.cc('/') }><Link to="/">Introduction</Link></li>
@@ -70,7 +70,7 @@ class Main extends Component {
                 <li className={ this.cc('/vue') }><Link to="/vue">Storm – Vue</Link></li>
                 <li className={ this.cc('/react') }><Link to="/react">Storm – React</Link></li>
               </ul>
-              <img className="img--aside-img" src="https://i.imgur.com/Ydft8tu.png" width="100"/>
+              <img className="img--aside-img" src="https://i.imgur.com/Ydft8tu.png" width="100" alt="Storm for React Native logo"/>
               <h4>React Native</h4>
               <ul>
                 <li className={ this.cc('/rn') }><Link to="/rn">Introduction</Link></li>
@@ -88,7 +88,7 @@ class Main extends Component {
           <main>
             <Route exact path="/" component={ Intro } />
             <Route path="/storage" component={ Storage } />
-            
+
             <Route path="/save" component={ Save } />
             <Route path="/find" component={ Find } />
             <Route path="/update" component={ Update } />

@@ -136,5 +136,12 @@ a, button, input {
 
 .link-on a {
   color: #0099E5;
-  font-weight: 600;
+}
+
+p small {
+  color: gray;
+}
+
+p small a {
+  color: #0099E5;
 }

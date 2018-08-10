@@ -9,12 +9,17 @@ const codeString = `
 <!-- Linking library -->
 <script src="https://unpkg.com/storm-orm@1.3.0/dist/storm.js"></script>
 
+<!-- or import -->
+<script>
+  import Collection from 'storm-orm'
+</script>
+
 <script>
   // Create a collection
   const Users = new Collection('@usersReference')
 
-  if ( !Users.exists() ) {      // Check if exists data
-    console.log( Users.find() ) // Show saved data
+  if (Users.exists()) {         // Check if exists data
+    console.log(Users.find())   // Show saved data
   } else {                      // or
     Users.save({                // Save new data
       name: 'Eliseo',
@@ -27,8 +32,8 @@ const codeString = `
 
 const Home = () => (
   <section className="main--info-section">
-    <img src="https://i.imgur.com/H2ohkEI.png" width="230"/>
-    
+    <img src="https://i.imgur.com/H2ohkEI.png" width="230" alt="Storm logo"/>
+
     <div className="separator to-left"></div>
 
     <h1 className="hidden">Storm</h1>
@@ -57,7 +62,7 @@ const Home = () => (
     </SyntaxHighlighter>
 
     <p>
-      <small>Helps to mantain this page on GitHub, fix bug or errors</small>
+      <small>contribute to <a href="https://github.com/e1016/storm-website" target="_blank" rel="noopener noreferrer">this page on GitHub</a></small>
     </p>
 
   </section>
