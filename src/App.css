@@ -145,3 +145,7 @@ p small {
 p small a {
   color: #0099E5;
 }
+
+.pd-left-15 {
+  padding-left: 20px;
+}

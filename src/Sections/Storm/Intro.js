@@ -57,7 +57,7 @@ const Home = () => (
 
     <p>Quick start guide</p>
 
-    <SyntaxHighlighter language='html' style={ theme }>
+    <SyntaxHighlighter language="html" style={ theme }>
       { codeString }
     </SyntaxHighlighter>
 
