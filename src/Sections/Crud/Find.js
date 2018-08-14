@@ -138,7 +138,7 @@ cats.findSorted('> name')
 `
 
 const Find = () => (
-  <section>
+  <section className="main--info-section">
     <h1>Find</h1>
     <p>
       At the time of reading we have 3 options:

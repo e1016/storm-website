@@ -38,7 +38,7 @@ Users.save({
 `
 
 export default () => (
-  <section>
+  <section className="main--info-section">
     <h1>Save</h1>
 
     <p>For save data (assuming we use the users collection) you just need to use the <i>save</i> method of users and pass a JSON as argument with "the user information" and don't need to have a static schema.</p>
