@@ -7,23 +7,25 @@ import {
   Intro,
   Storage
 } from '../Sections/Storm'
-
 import {
   Save,
   Find,
   Update,
   Erase
 } from '../Sections/Crud'
-
 import {
   Events,
   Prototype
 } from '../Sections/Methods'
-
 import {
   StormReact,
   StormVue
 } from '../Sections/Integrations'
+
+import {
+  RNIntro,
+  RNStorage
+} from '../Sections/RN/Storm'
 
 class Main extends Component {
   constructor (props) {
@@ -84,7 +86,7 @@ class Main extends Component {
               <h4>React Native</h4>
               <ul>
                 <li className={ this.cc('/rn') }><Link to="/rn">Introduction</Link></li>
-                <li className={ this.cc('/rn/storage') }><Link to="/rn/storage">localStorage</Link></li>
+                <li className={ this.cc('/rn-storage') }><Link to="/rn-storage">AsyncStorage</Link></li>
               </ul>
               <h4>Crud</h4>
               <ul>
@@ -106,11 +108,17 @@ class Main extends Component {
             <Route path="/find" component={ Find } />
             <Route path="/update" component={ Update } />
             <Route path="/erase" component={ Erase } />
+
             <Route path="/events" component={ Events } />
             <Route path="/prototype" component={ Prototype } />
 
             <Route path="/react" component={ StormReact } />
             <Route path="/vue" component={ StormVue } />
+
+            {/* React Native */}
+
+            <Route path="/rn" component={ RNIntro } />
+            <Route path="/rn-storage" component={ RNStorage } />
           </main>
         </div>
       </Router>

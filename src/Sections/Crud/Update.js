@@ -36,7 +36,7 @@ export default () => (
 
     <h1>Update</h1>
 
-    <p>Update data in store is more easy with Storm, for example, we will set gender 'Male' where gender is equals to 'M'</p>
+    <p>Update data in store is more easy with Storm, for example, we will set gender <b>'Male'</b> where gender is equals to <b>'M'</b></p>
 
     <SyntaxHighlighter language="javascript" style={ theme }>
       { One }
@@ -48,7 +48,7 @@ export default () => (
       { Two }
     </SyntaxHighlighter>
 
-    <p>In the other hand, all properties in 'set' will attach or replace from stored data, if the property exists in then item, they value will be replaced, else, this will be added</p>
+    <p>In the other hand, all properties in 'set' will attach or replace from stored data, if the property exists in then item, they value will be replaced, else, this will be added.</p>
 
       <SyntaxHighlighter language="javascript" style={ theme }>
         { Three }

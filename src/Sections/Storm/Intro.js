@@ -40,7 +40,7 @@ const Home = () => (
     <br />
     <br />
     <p>
-      Storm provides a fast and simple way to manage storage in web browsers, becoming an intermediary between localStorage and the dev, in a simple CRUD... Save, Find, Update and Erase, perfect to integrate with Vue, React, o simple Vanilla JavaScript.
+      Storm provides a fast and simple way to manage storage in web browsers, becoming an intermediary between localStorage and the dev, in a simple CRUD; <b>save</b> , <b>find</b> , <b>update</b>  and <b>erase</b> , perfect to integrate with Vue, React, o simple Vanilla JavaScript.
       <br />
       <br />
       <code>

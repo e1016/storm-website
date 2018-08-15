@@ -2,6 +2,7 @@ import React from 'react'
 
 export default () => (
   <section className="main--info-section">
-    <p>React</p>
+    <h1>React & Storm</h1>
+    <p>Soon..</p>
   </section>
 )

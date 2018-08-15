@@ -151,7 +151,7 @@ const Find = () => (
     <br />
     <div className="separator to-left"></div>
     <br />
-    <p>[1] Get the entire collection.</p>
+    <p><b>1</b> Get the entire collection.</p>
     <p>We can invoke the find method without parameters, on a collection, like this.</p>
 
     <SyntaxHighlighter language="javascript" style={ theme }>
@@ -171,7 +171,7 @@ const Find = () => (
     <div className="separator to-left"></div>
     <br />
 
-    <p>[2] Get a part of the collection.</p>
+    <p><b>2</b> Get a part of the collection.</p>
 
     <p>We can invoke the find method passing an object as a parameter, this object contains the conditions that the cat (in this case) must fulfill, like this.</p>
     <SyntaxHighlighter language="javascript" style={ theme }>
@@ -186,7 +186,7 @@ const Find = () => (
     <div className="separator to-left"></div>
     <br />
 
-    <p>[3] Get a part of the collection.</p>
+    <p><b>3</b> Get a part of the collection.</p>
     <p>If we pass as a last parameter a string defining which fields we want to recover, then we will only obtain those fields, like this.</p>
     <SyntaxHighlighter language="javascript" style={ theme }>
       { Six }

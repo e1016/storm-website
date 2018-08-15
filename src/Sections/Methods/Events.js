@@ -10,8 +10,17 @@ collection.on('event', callback...
 const Two = `
 // example
 Users.on('save', function () {
-  $vm.users = Users.find()
+  let myVariable = Users.find()
 })
+`
+const Three = `
+..on('save', ...
+
+..on('find', ...
+
+..on('update', ...
+
+..on('erase', ...
 `
 
 export default () => (
@@ -31,5 +40,13 @@ export default () => (
       { Two }
     </SyntaxHighlighter>
 
+    <p>Every time the save method is executed (in Users collection), find method will be dispatched.</p>
+    <br />
+
+    <p>Avalible methods: <b>save</b> , <b>find</b> , <b>update</b> and <b>erase</b></p>
+
+    <SyntaxHighlighter language="javascript" style={ theme }>
+      { Three }
+    </SyntaxHighlighter>
   </section>
 )
