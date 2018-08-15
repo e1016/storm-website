@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+import Menu from './Src/Menu'
+
 import {
   Intro,
   Storage
@@ -24,10 +26,11 @@ import {
 } from '../Sections/Integrations'
 
 class Main extends Component {
-  cc (argm) {
-    return (window.location.pathname === argm)
-     ? 'link link-on'
-     : 'link'
+  constructor (props) {
+    super(props)
+    this.state = {
+      activeMenu: 'closed'
+    }
   }
 
   componentDidMount () {
@@ -37,15 +40,22 @@ class Main extends Component {
           .classList.remove('link-on')
 
         e.currentTarget.classList.add('link-on')
+        this.setState({ activeMenu: 'closed' })
       })
     )
+  }
+
+  cc (argm) {
+    return (window.location.pathname === argm)
+      ? 'link link-on'
+      : 'link'
   }
 
   render () {
     return (
       <Router>
         <div className="main--divider">
-          <aside className="aside aside--container">
+          <aside className={'aside aside--container ' + this.state.activeMenu}>
             <ul>
               <img className="img--aside-img" src="https://i.imgur.com/H2ohkEI.png" width="100" alt="Storm logo"/>
               <h4>Storm</h4>
@@ -85,7 +95,10 @@ class Main extends Component {
               </ul>
             </ul>
           </aside>
-          <main>
+          <main className={this.state.activeMenu}>
+            <Menu
+              Main={this}/>
+
             <Route exact path="/" component={ Intro } />
             <Route path="/storage" component={ Storage } />
 
