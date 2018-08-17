@@ -3,29 +3,13 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Menu from './Src/Menu'
 
-import {
-  Intro,
-  Storage
-} from '../Sections/Storm'
-import {
-  Save,
-  Find,
-  Update,
-  Erase
-} from '../Sections/Crud'
-import {
-  Events,
-  Prototype
-} from '../Sections/Methods'
-import {
-  StormReact,
-  StormVue
-} from '../Sections/Integrations'
+import { Intro, Storage } from '../Sections/Storm'
+import { Save, Find, Update, Erase } from '../Sections/Crud'
+import { Events, Prototype } from '../Sections/Methods'
+import { StormReact, StormVue } from '../Sections/Integrations'
 
-import {
-  RNIntro,
-  RNStorage
-} from '../Sections/RN/Storm'
+import { RNIntro, RNStorage } from '../Sections/RN/Storm'
+import { RNSave, RNFind, RNUpdate, RNErase } from '../Sections/RN/Crud'
 
 class Main extends Component {
   constructor (props) {
@@ -90,10 +74,10 @@ class Main extends Component {
               </ul>
               <h4>Crud</h4>
               <ul>
-                <li className={ this.cc('/rn/save') }><Link to="/rn/save">Created – Save</Link></li>
-                <li className={ this.cc('/rn/find') }><Link to="/rn/find">Read – Find</Link></li>
-                <li className={ this.cc('/rn/update') }><Link to="/rn/update">Update</Link></li>
-                <li className={ this.cc('/rn/erase') }><Link to="/rn/erase">Delete – Erase</Link></li>
+                <li className={ this.cc('/rn-save') }><Link to="/rn-save">Created – Save</Link></li>
+                <li className={ this.cc('/rn-find') }><Link to="/rn-find">Read – Find</Link></li>
+                <li className={ this.cc('/rn-update') }><Link to="/rn-update">Update</Link></li>
+                <li className={ this.cc('/rn-erase') }><Link to="/rn-erase">Delete – Erase</Link></li>
               </ul>
             </ul>
           </aside>
@@ -119,6 +103,11 @@ class Main extends Component {
 
             <Route path="/rn" component={ RNIntro } />
             <Route path="/rn-storage" component={ RNStorage } />
+
+            <Route path="/rn-save" component={ RNSave } />
+            <Route path="/rn-find" component={ RNFind } />
+            <Route path="/rn-update" component={ RNUpdate } />
+            <Route path="/rn-erase" component={ RNErase } />
           </main>
         </div>
       </Router>

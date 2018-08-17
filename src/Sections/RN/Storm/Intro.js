@@ -6,6 +6,11 @@ import { base16AteliersulphurpoolLight as theme } from 'react-syntax-highlighter
 const One = `
 import Collection from 'storm-react-native'
 
+/*
+* The string passed as argument to Collection
+* constructor is used for save data with
+* AsyncStorage.
+*/
 const Users = new Collection('@users:store')
 const OtherStore = new Collection('@other:store')
 
@@ -16,7 +21,7 @@ export {
 `
 
 const Two = `
-import React, { Component } from 'storm-react-native'
+import React, { Component } from 'react'
 import {
   View,
   Text,
@@ -84,17 +89,27 @@ const RNIntro = () => (
     <p>Quick start guide: rendering users list</p>
     <br />
 
-    <p><b>react-native-project/Collections/index.js</b></p>
+    <p><b>react-native-project/Collections.js</b></p>
 
     <SyntaxHighlighter language="javascript" style={ theme }>
       { One }
     </SyntaxHighlighter>
 
-    <p><b>react-native-project/App.js</b></p>
+    <p>
+      <b>react-native-project/App.js</b>
+    </p>
 
     <SyntaxHighlighter language="javascript" style={ theme }>
       { Two }
     </SyntaxHighlighter>
+
+    <p>
+      <small>
+        <a href="https://github.com/e1016/storm-react-native">
+          Check this in github
+        </a>
+      </small>
+    </p>
 
   </section>
 )
