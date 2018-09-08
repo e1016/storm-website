@@ -44,7 +44,7 @@ const Home = () => (
       <br />
       <br />
       <code>
-        npm install --save storm-orm
+        npm install storm-storage
       </code>
     </p>
     <br />

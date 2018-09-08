@@ -82,7 +82,7 @@ const RNIntro = () => (
       <br />
       <br />
       <code>
-        npm install --save storm-react-native
+        npm install storm-react-native
       </code>
     </p>
     <br/>
